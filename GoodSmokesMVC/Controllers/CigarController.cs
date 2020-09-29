@@ -1,4 +1,6 @@
-﻿using System;
+﻿using GoodSmokes.Models;
+using GoodSmokesService.Service;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +13,23 @@ namespace GoodSmokesMVC.Controllers
         // GET: Cigar
         public ActionResult Index()
         {
+            var model = new CigarListItems[0];
+            return View(model);
+        }
+        // POST: Cigar/Create
+        
+        
+        public ActionResult Create()
+        {
+            
             return View();
         }
+
+        public ActionResult Details()
+        {
+            
+            return View();
+        }
+
     }
 }

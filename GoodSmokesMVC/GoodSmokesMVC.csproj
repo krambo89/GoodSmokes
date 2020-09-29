@@ -237,12 +237,14 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\CigarMaker\Index.cshtml" />
+    <Content Include="Views\Cigar\Index.cshtml" />
+    <Content Include="Views\CigarType\Index.cshtml" />
+    <Content Include="Views\Cigar\Details.cshtml" />
+    <Content Include="Views\Cigar\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\CigarMaker\" />
-    <Folder Include="Views\CigarType\" />
-    <Folder Include="Views\Cigar\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -258,9 +260,17 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Cigar\GoodSmokes.Service.csproj">
+      <Project>{70d01ea2-335e-42fe-82d7-4f667f9789a5}</Project>
+      <Name>GoodSmokes.Service</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ClassLibrary1\Goodsmokes.Data.csproj">
       <Project>{55CBEDFC-0581-45EE-8389-FAD44712EBC7}</Project>
       <Name>Goodsmokes.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GoodSmokes.Models\GoodSmokes.Models.csproj">
+      <Project>{ab51edd3-7dea-4a07-9ca3-788d5e671563}</Project>
+      <Name>GoodSmokes.Models</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
