@@ -58,9 +58,13 @@
     <Compile Include="CigarMaker.cs" />
     <Compile Include="CigarType.cs" />
     <Compile Include="IdentityModels.cs" />
-    <Compile Include="Migrations\202010021922040_first-migration.cs" />
-    <Compile Include="Migrations\202010021922040_first-migration.Designer.cs">
-      <DependentUpon>202010021922040_first-migration.cs</DependentUpon>
+    <Compile Include="Migrations\202010051910346_first-migration.cs" />
+    <Compile Include="Migrations\202010051910346_first-migration.Designer.cs">
+      <DependentUpon>202010051910346_first-migration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010051932228_second-migration.cs" />
+    <Compile Include="Migrations\202010051932228_second-migration.Designer.cs">
+      <DependentUpon>202010051932228_second-migration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -70,8 +74,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202010021922040_first-migration.resx">
-      <DependentUpon>202010021922040_first-migration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202010051910346_first-migration.resx">
+      <DependentUpon>202010051910346_first-migration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010051932228_second-migration.resx">
+      <DependentUpon>202010051932228_second-migration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

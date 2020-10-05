@@ -24,7 +24,8 @@ namespace GoodSmokesMVC.Controllers
 
         public ActionResult Index()
         {
-            var model = new CigarMakerListItems[0];
+            var service = CreateCigarMakerService();
+            var model = service.GetCigarMakers();
             return View(model);
         }
         // POST: CigarMaker/Create

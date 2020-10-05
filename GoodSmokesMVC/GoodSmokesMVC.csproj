@@ -237,8 +237,6 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Cigar\Index.cshtml" />
-    <Content Include="Views\Cigar\Create.cshtml" />
     <Content Include="Views\CigarMaker\Index.cshtml" />
     <Content Include="Views\CigarMaker\Create.cshtml" />
     <Content Include="Views\CigarMaker\Details.cshtml" />
@@ -249,6 +247,8 @@
     <Content Include="Views\CigarType\Details.cshtml" />
     <Content Include="Views\CigarType\Edit.cshtml" />
     <Content Include="Views\CigarType\Delete.cshtml" />
+    <Content Include="Views\Cigar\Index.cshtml" />
+    <Content Include="Views\Cigar\Create.cshtml" />
     <Content Include="Views\Cigar\Details.cshtml" />
     <Content Include="Views\Cigar\Edit.cshtml" />
     <Content Include="Views\Cigar\Delete.cshtml" />

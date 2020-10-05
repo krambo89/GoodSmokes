@@ -13,7 +13,7 @@ namespace ClassLibrary1.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202010021922040_first-migration"; }
+            get { return "202010051910346_first-migration"; }
         }
         
         string IMigrationMetadata.Source

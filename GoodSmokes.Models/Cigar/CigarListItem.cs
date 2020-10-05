@@ -14,7 +14,9 @@ namespace GoodSmokes.Models
         public string CigarName { get; set; }
 
         public int MakerId { get; set; }
+        public string TheMaker { get; set; }
 
         public int CigarTypeId { get; set; }
+        public string TheType { get; set; }
     }
 }

@@ -19,7 +19,8 @@ namespace GoodSmokesMVC.Controllers
         }
         public ActionResult Index()
         {
-            var model = new CigarTypeListItems[0];
+            var service = CreateCigarTypeService();
+            var model = service.GetCigarTypes();
             return View(model);
         }
      

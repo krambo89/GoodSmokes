@@ -31,28 +31,30 @@ namespace GoodSmokesService.Service
                 return ctx.SaveChanges() == 1;
             }
         }
-        public List<CigarListItems> GetCigars()
+        public IEnumerable<CigarListItems> GetCigars()
         {
             using (var ctx = new ApplicationDbContext())
             {
 
-                var cigarEntity = ctx.Cigars;
-
                 var cigarListItems = new List<CigarListItems>();
 
-                foreach (var cigar in cigarEntity)
+                foreach (var cigar in ctx.Cigars)
                 {
                     var cigarListItem = new CigarListItems()
                     {
 
                         CigarId = cigar.CigarId,
                         CigarName = cigar.CigarName,
+                        TheMaker = cigar.TheMaker.MakerName,
+                        TheType = cigar.TheType.CigarTypeName,
                         MakerId = cigar.MakerId,
-                        CigarTypeId = cigar.CigarTypeId
+                        CigarTypeId = cigar.CigarTypeId,
                     };
 
                     cigarListItems.Add(cigarListItem);
                 }
+
+                
 
                 return cigarListItems;
 
@@ -108,8 +110,8 @@ namespace GoodSmokesService.Service
                     {
                         CigarId = entity.CigarId,
                         CigarName = entity.CigarName,
-                        MakerId = entity.MakerId,
-                        CigarTypeId = entity.CigarTypeId,
+                        TheMaker = entity.TheMaker.MakerName,
+                        TheType = entity.TheType.CigarTypeName,
 
 
                     };

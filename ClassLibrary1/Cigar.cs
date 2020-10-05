@@ -17,13 +17,13 @@ namespace ClassLibrary1
         public string CigarName { get; set; }
 
 
-        [ForeignKey(nameof(CigarMaker))]
+        [ForeignKey(nameof(TheMaker))]
         public int MakerId { get; set; }
-        public virtual CigarMaker CigarMaker { get; set; }
+        public virtual CigarMaker TheMaker { get; set; }
 
-        [ForeignKey(nameof(CigarType))]
+        [ForeignKey(nameof(TheType))]
         public int CigarTypeId { get; set; }
-        public virtual CigarType CigarType { get; set; }
+        public virtual CigarType TheType { get; set; }
 
 
     }

@@ -1,4 +1,6 @@
-﻿using GoodSmokes.Models;
+﻿using ClassLibrary1;
+using GoodSmokes.Data;
+using GoodSmokes.Models;
 using GoodSmokesService.Service;
 using System;
 using System.Collections.Generic;
@@ -11,17 +13,20 @@ namespace GoodSmokesMVC.Controllers
     public class CigarController : Controller
     {
         // GET: Cigar
+        private ApplicationDbContext _db = new ApplicationDbContext();
+        
+        public ActionResult Index()
+        {
+            var service = CreateCigarService();
+            var model = service.GetCigars();
+            return View(model);
+        }
+        // POST: Cigar/Create
 
         public ActionResult Create()
         {
             return View();
         }
-        public ActionResult Index()
-        {
-            var model = new CigarListItems[0];
-            return View(model);
-        }
-        // POST: Cigar/Create
 
         [HttpPost]
         public ActionResult Create(CigarCreate model)
@@ -38,6 +43,8 @@ namespace GoodSmokesMVC.Controllers
             ModelState.AddModelError("", "Cigar could not be created");
             return View(model);
         }
+
+        
 
 
         public ActionResult Details(int id)
