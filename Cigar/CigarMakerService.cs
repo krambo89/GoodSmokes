@@ -21,7 +21,7 @@ namespace GoodSmokesService.Service
                 new CigarMaker
                 {
 
-                    CigarName = model.CigarName,
+
                     MakerName = model.MakerName,
 
                 };
@@ -47,7 +47,7 @@ namespace GoodSmokesService.Service
                     {
 
 
-                        CigarName = cigar.CigarName,
+                        
                         MakerId = cigar.MakerId,
                         MakerName = cigar.MakerName
                     };
@@ -70,13 +70,19 @@ namespace GoodSmokesService.Service
                     ctx
                         .CigarMakers
                         .Single(e => e.MakerId == model.MakerId);
-                entity.MakerName = model.MakerName;
-                entity.CigarName = model.CigarName;
+                if (entity.MakerName == model.MakerName)
+                {
+                    return true;
+                }
+
+                {
+                    entity.MakerName = model.MakerName;
+                }
                 return ctx.SaveChanges() == 1;
             }
         }
 
-        public bool DeleteCigarType(int id)
+        public bool DeleteCigarMaker(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {
@@ -98,13 +104,22 @@ namespace GoodSmokesService.Service
                         .CigarMakers
                         .SingleOrDefault(e => e.MakerId == id);
 
+                var cigarsEntity =
+                    ctx
+                        .Cigars
+                        .Where(s => s.MakerId == id);
+
+                List<string> cigars = new List<string>();
+
+                foreach (var cigarName in cigarsEntity)
+                    cigars.Add(cigarName.CigarName);
+
                 return
                     new CigarMakerDetails
                     {
 
-                        CigarName = entity.CigarName,
+                        TheirCigars = cigars,
                         MakerId = entity.MakerId,
-
 
                     };
             }

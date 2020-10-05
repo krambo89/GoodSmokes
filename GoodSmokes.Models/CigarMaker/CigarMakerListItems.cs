@@ -13,6 +13,6 @@ namespace GoodSmokes.Models.CigarMaker
 
         public string MakerName { get; set; }
 
-        public ICollection<Cigar> CigarName { get; set; }
+        public virtual ICollection<Cigar> Cigars { get; set; }
     }
 }

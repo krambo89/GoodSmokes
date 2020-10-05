@@ -18,9 +18,9 @@ namespace GoodSmokesService.Service
                 new CigarType
                 {
 
-                    CigarName = model.CigarName,
+
                     CigarTypeName = model.CigarTypeName,
-                    CigarTypeId = model.CigarTypeId
+                    
                 };
 
             using (var ctx = new ApplicationDbContext())
@@ -44,7 +44,7 @@ namespace GoodSmokesService.Service
                     {
 
 
-                        CigarName = cigar.CigarName,
+                        
                         CigarTypeName = cigar.CigarTypeName,
                         CigarTypeId = cigar.CigarTypeId
                     };
@@ -67,9 +67,14 @@ namespace GoodSmokesService.Service
                     ctx
                         .CigarTypes
                         .Single(e => e.CigarTypeId == model.CigarTypeId);
-                entity.CigarName = model.CigarName;
-                entity.CigarTypeName = model.CigarTypeName;
-                entity.CigarTypeId = model.CigarTypeId;
+                if (entity.CigarTypeName == model.CigarTypeName)
+                {
+                    return true;
+                }
+
+                {
+                    entity.CigarTypeName = model.CigarTypeName;
+                }
                 return ctx.SaveChanges() == 1;
             }
         }
@@ -96,11 +101,21 @@ namespace GoodSmokesService.Service
                         .CigarTypes
                         .SingleOrDefault(e => e.CigarTypeId == id);
 
+                var cigarsEntity =
+                    ctx
+                        .Cigars
+                        .Where(s => s.CigarTypeId == id);
+
+                List<string> cigars = new List<string>();
+
+                foreach (var cigarName in cigarsEntity)
+                    cigars.Add(cigarName.CigarName);
+
                 return
                     new CigarTypeDetails
                     {
 
-                        CigarName = entity.CigarName,
+                        AssociatedCigars = cigars,
                         CigarTypeId = entity.CigarTypeId,
 
 

@@ -11,7 +11,7 @@ namespace GoodSmokes.Models
     {
         public int CigarId { get; set; }
 
-        public ICollection<Cigar> CigarName { get; set; }
+        public string CigarName { get; set; }
 
         public int MakerId { get; set; }
 

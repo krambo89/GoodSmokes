@@ -23,9 +23,7 @@ namespace GoodSmokes.Data
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-        public DbSet<Cigar> Cigars { get; set; }
-        public DbSet<CigarMaker> CigarMakers { get; set; }
-        public DbSet<CigarType> CigarTypes { get; set; }
+        
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
@@ -36,7 +34,9 @@ namespace GoodSmokes.Data
             return new ApplicationDbContext();
         }
 
-
+        public DbSet<Cigar> Cigars { get; set; }
+        public DbSet<CigarMaker> CigarMakers { get; set; }
+        public DbSet<CigarType> CigarTypes { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

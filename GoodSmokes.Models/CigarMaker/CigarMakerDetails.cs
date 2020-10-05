@@ -12,7 +12,9 @@ namespace GoodSmokes.Models
         public int MakerId { get; set; }
         public string MakerName { get; set; }
 
-        public ICollection<Cigar> CigarName { get; set; }
+
+
+        public List<string> TheirCigars { get; set; }
 
 
     }

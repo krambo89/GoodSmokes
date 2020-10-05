@@ -21,17 +21,15 @@ namespace ClassLibrary1.Migrations
                 c => new
                     {
                         CigarId = c.Int(nullable: false, identity: true),
+                        CigarName = c.String(nullable: false),
                         MakerId = c.Int(nullable: false),
                         CigarTypeId = c.Int(nullable: false),
-                        Cigar_CigarId = c.Int(),
                     })
                 .PrimaryKey(t => t.CigarId)
                 .ForeignKey("dbo.CigarMaker", t => t.MakerId, cascadeDelete: true)
-                .ForeignKey("dbo.Cigar", t => t.Cigar_CigarId)
                 .ForeignKey("dbo.CigarType", t => t.CigarTypeId, cascadeDelete: true)
                 .Index(t => t.MakerId)
-                .Index(t => t.CigarTypeId)
-                .Index(t => t.Cigar_CigarId);
+                .Index(t => t.CigarTypeId);
             
             CreateTable(
                 "dbo.CigarType",
@@ -121,13 +119,11 @@ namespace ClassLibrary1.Migrations
             DropForeignKey("dbo.IdentityUserClaim", "ApplicationUser_Id", "dbo.ApplicationUser");
             DropForeignKey("dbo.IdentityUserRole", "IdentityRole_Id", "dbo.IdentityRole");
             DropForeignKey("dbo.Cigar", "CigarTypeId", "dbo.CigarType");
-            DropForeignKey("dbo.Cigar", "Cigar_CigarId", "dbo.Cigar");
             DropForeignKey("dbo.Cigar", "MakerId", "dbo.CigarMaker");
             DropIndex("dbo.IdentityUserLogin", new[] { "ApplicationUser_Id" });
             DropIndex("dbo.IdentityUserClaim", new[] { "ApplicationUser_Id" });
             DropIndex("dbo.IdentityUserRole", new[] { "ApplicationUser_Id" });
             DropIndex("dbo.IdentityUserRole", new[] { "IdentityRole_Id" });
-            DropIndex("dbo.Cigar", new[] { "Cigar_CigarId" });
             DropIndex("dbo.Cigar", new[] { "CigarTypeId" });
             DropIndex("dbo.Cigar", new[] { "MakerId" });
             DropTable("dbo.IdentityUserLogin");

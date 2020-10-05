@@ -9,9 +9,10 @@ namespace GoodSmokes.Models.CigarType
 {
     public class CigarTypeEdit
     {
-        public int CigarTypeId { get; set; }
+        public readonly int CigarTypeId;
+
         public string CigarTypeName { get; set; }
 
-        public ICollection<Cigar> CigarName { get; set; }
+        public virtual ICollection<Cigar> Cigars { get; set; }
     }
 }

@@ -12,6 +12,6 @@ namespace GoodSmokes.Models.CigarType
         public int CigarTypeId { get; set; }
         public string CigarTypeName { get; set; }
 
-        public ICollection<Cigar> CigarName { get; set; }
+        public List<string> AssociatedCigars { get; set; }
     }
 }

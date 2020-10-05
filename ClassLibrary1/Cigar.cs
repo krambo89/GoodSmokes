@@ -14,7 +14,7 @@ namespace ClassLibrary1
         public int CigarId { get; set; }
 
         [Required]
-        public ICollection<Cigar> CigarName { get; set; }
+        public string CigarName { get; set; }
 
 
         [ForeignKey(nameof(CigarMaker))]

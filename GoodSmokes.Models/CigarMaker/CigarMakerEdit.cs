@@ -9,10 +9,10 @@ namespace GoodSmokes.Models
 {
     public class CigarMakerEdit
     {
-        public int MakerId { get; set; }
+        public readonly int MakerId;
 
         public string MakerName { get; set; }
 
-        public ICollection<Cigar> CigarName { get; set; }
+        public virtual ICollection<Cigar> Cigars { get; set; }
     }
 }

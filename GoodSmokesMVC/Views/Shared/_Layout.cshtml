@@ -22,6 +22,12 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li>@Html.ActionLink("Cigar", "Index", "Cigar")</li>
+                        <li>@Html.ActionLink("Cigar Maker", "Index", "CigarMaker")</li>
+                        <li>@Html.ActionLink("Cigar Type", "Index", "CigarType")</li>
+                    }
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                 </ul>

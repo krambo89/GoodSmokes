@@ -69,9 +69,14 @@ namespace GoodSmokesService.Service
                     ctx
                         .Cigars
                         .Single(e => e.CigarId == model.CigarId);
-                entity.CigarName = model.CigarName;
-                entity.MakerId = model.MakerId;
-                entity.CigarTypeId = model.CigarTypeId;
+                if (entity.CigarName == model.CigarName)
+                {
+                    return true;
+                }
+
+                {
+                    entity.CigarName = model.CigarName;
+                }
                 return ctx.SaveChanges() == 1;
             }
         }
