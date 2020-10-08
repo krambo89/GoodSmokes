@@ -9,7 +9,7 @@ namespace GoodSmokes.Models
 {
     public class CigarMakerEdit
     {
-        public readonly int MakerId;
+        public int MakerId { get; set; }
 
         public string MakerName { get; set; }
 

@@ -70,6 +70,18 @@
     <Compile Include="Migrations\202010051934456_third-migration.Designer.cs">
       <DependentUpon>202010051934456_third-migration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202010081914356_sercive and model update.cs" />
+    <Compile Include="Migrations\202010081914356_sercive and model update.Designer.cs">
+      <DependentUpon>202010081914356_sercive and model update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010081929230_further updates.cs" />
+    <Compile Include="Migrations\202010081929230_further updates.Designer.cs">
+      <DependentUpon>202010081929230_further updates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010081938582_another update.cs" />
+    <Compile Include="Migrations\202010081938582_another update.Designer.cs">
+      <DependentUpon>202010081938582_another update.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -86,6 +98,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202010051934456_third-migration.resx">
       <DependentUpon>202010051934456_third-migration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010081914356_sercive and model update.resx">
+      <DependentUpon>202010081914356_sercive and model update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010081929230_further updates.resx">
+      <DependentUpon>202010081929230_further updates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010081938582_another update.resx">
+      <DependentUpon>202010081938582_another update.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -76,6 +76,7 @@ namespace GoodSmokesService.Service
                 }
 
                 {
+                    entity.MakerId = model.MakerId;
                     entity.MakerName = model.MakerName;
                 }
                 return ctx.SaveChanges() == 1;
@@ -118,8 +119,9 @@ namespace GoodSmokesService.Service
                     new CigarMakerDetails
                     {
 
-                        TheirCigars = cigars,
+                        
                         MakerId = entity.MakerId,
+                        MakerName = entity.MakerName,
 
                     };
             }

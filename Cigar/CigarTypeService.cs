@@ -43,10 +43,8 @@ namespace GoodSmokesService.Service
                     var cigarTypeListItem = new CigarTypeListItems()
                     {
 
-
-                        
+                        CigarTypeId = cigar.CigarTypeId,
                         CigarTypeName = cigar.CigarTypeName,
-                        CigarTypeId = cigar.CigarTypeId
                     };
 
                     cigarTypeListItems.Add(cigarTypeListItem);
@@ -73,6 +71,7 @@ namespace GoodSmokesService.Service
                 }
 
                 {
+                    entity.CigarTypeId = model.CigarTypeId;
                     entity.CigarTypeName = model.CigarTypeName;
                 }
                 return ctx.SaveChanges() == 1;
@@ -115,8 +114,9 @@ namespace GoodSmokesService.Service
                     new CigarTypeDetails
                     {
 
-                        AssociatedCigars = cigars,
+                        
                         CigarTypeId = entity.CigarTypeId,
+                        CigarTypeName = entity.CigarTypeName
 
 
                     };
