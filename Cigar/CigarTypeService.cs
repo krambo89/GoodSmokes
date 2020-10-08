@@ -116,7 +116,8 @@ namespace GoodSmokesService.Service
 
                         
                         CigarTypeId = entity.CigarTypeId,
-                        CigarTypeName = entity.CigarTypeName
+                        CigarTypeName = entity.CigarTypeName,
+                        AssociatedCigars = cigars,
 
 
                     };

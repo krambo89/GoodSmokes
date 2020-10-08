@@ -122,6 +122,7 @@ namespace GoodSmokesService.Service
                         
                         MakerId = entity.MakerId,
                         MakerName = entity.MakerName,
+                        TheirCigars = cigars,
 
                     };
             }
