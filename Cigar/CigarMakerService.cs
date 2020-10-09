@@ -47,7 +47,7 @@ namespace GoodSmokesService.Service
                     {
 
 
-                        
+                     
                         MakerId = cigar.MakerId,
                         MakerName = cigar.MakerName
                     };
