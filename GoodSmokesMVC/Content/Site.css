@@ -36,6 +36,7 @@ textarea {
     .jumbotron h1,
     .jumbotron .h1 {
         color: white;
+        font-family: Rockwell;
     }
 
     .jumbotron p {

@@ -1188,6 +1188,8 @@ h6,
   font-weight: 500;
   line-height: 1.1;
   color: white;
+  text-align: center;
+  font-family: Rockwell;
 }
 h1 small,
 h2 small,
@@ -1216,6 +1218,7 @@ h6 .small,
   font-weight: 400;
   line-height: 1;
   color: #777777;
+  font-family: Rockwell;
 }
 h1,
 .h1,
@@ -1449,11 +1452,12 @@ dd {
 dt {
   font-weight: 700;
   color: white;
+  font-family: Rockwell;
 }
 dd {
-  margin-left: 0;
-  color: white;
-  
+    margin-left: 0;
+    color: white;
+    font-family: Rockwell;
 }
 @media (min-width: 768px) {
   .dl-horizontal dt {
@@ -1616,6 +1620,7 @@ pre code {
 .row {
   margin-right: -15px;
   margin-left: -15px;
+  margin-top: 150px;
 }
 .row-no-gutters {
   margin-right: 0;
@@ -1679,6 +1684,7 @@ pre code {
   padding-left: 15px;
   font-weight: bold;
   color: white;
+  font-family: Rockwell;
   
 }
 .col-xs-1,
