@@ -254,6 +254,7 @@
     <Content Include="Views\CigarMaker\Delete.cshtml" />
     <Content Include="Views\CigarType\Delete.cshtml" />
     <Content Include="Views\CigarMaker\Details.cshtml" />
+    <Content Include="Views\Home\Links.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

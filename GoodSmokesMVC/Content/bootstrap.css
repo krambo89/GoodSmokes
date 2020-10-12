@@ -1482,7 +1482,7 @@ blockquote {
   padding: 10px 20px;
   margin: 0 0 20px;
   font-size: 17.5px;
-  border-left: 5px solid #eeeeee;
+  border-left: 5px solid transparent;
 }
 blockquote p:last-child,
 blockquote ul:last-child,
@@ -1495,7 +1495,7 @@ blockquote .small {
   display: block;
   font-size: 80%;
   line-height: 1.42857143;
-  color: #777777;
+  
 }
 blockquote footer:before,
 blockquote small:before,
@@ -1507,7 +1507,7 @@ blockquote.pull-right {
   padding-right: 15px;
   padding-left: 0;
   text-align: right;
-  border-right: 5px solid #eeeeee;
+  border-right: 5px solid transparent;
   border-left: 0;
 }
 .blockquote-reverse footer:before,
