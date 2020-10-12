@@ -108,7 +108,7 @@ namespace GoodSmokesService.Service
                 List<string> cigars = new List<string>();
 
                 foreach (var cigarName in cigarsEntity)
-                    cigars.Add(cigarName.CigarName);
+                    cigars.Add(cigarName.CigarName + "," + " ");
 
                 return
                     new CigarTypeDetails

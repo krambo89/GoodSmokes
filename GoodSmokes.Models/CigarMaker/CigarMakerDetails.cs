@@ -17,7 +17,7 @@ namespace GoodSmokes.Models
         public string MakerName { get; set; }
 
 
-        [Display(Name = "Their Name")]
+        [Display(Name = "Their Cigars")]
         public List<string> TheirCigars { get; set; }
 
 

@@ -13,7 +13,7 @@ namespace GoodSmokes.Models.CigarType
         [Display(Name = "Size ID")]
         public int CigarTypeId { get; set; }
         [Display(Name = "Size Name")]
-        public string CigarTypeName { get; set; 
+        public string CigarTypeName { get; set; }
 
         [Display(Name = "Associated Cigars")]
         public List<string> AssociatedCigars { get; set; }

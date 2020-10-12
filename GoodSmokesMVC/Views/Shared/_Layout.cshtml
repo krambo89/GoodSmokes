@@ -24,12 +24,11 @@
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     @if (User.Identity.IsAuthenticated)
                     {
-                        <li>@Html.ActionLink("Cigar", "Index", "Cigar")</li>
-                        <li>@Html.ActionLink("Cigar Brand", "Index", "CigarMaker")</li>
-                        <li>@Html.ActionLink("Cigar Size", "Index", "CigarType")</li>
+                        <li>@Html.ActionLink("Cigars", "Index", "Cigar")</li>
+                        <li>@Html.ActionLink("Brands", "Index", "CigarMaker")</li>
+                        <li>@Html.ActionLink("Sizes", "Index", "CigarType")</li>
                     }
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
