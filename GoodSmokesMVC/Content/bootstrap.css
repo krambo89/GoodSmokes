@@ -1186,7 +1186,7 @@ h6,
   font-family: inherit;
   font-weight: 500;
   line-height: 1.1;
-  color: inherit;
+  color: white;
 }
 h1 small,
 h2 small,
@@ -1447,9 +1447,11 @@ dd {
 }
 dt {
   font-weight: 700;
+  color: white;
 }
 dd {
   margin-left: 0;
+  color: white;
 }
 @media (min-width: 768px) {
   .dl-horizontal dt {
@@ -1460,6 +1462,7 @@ dd {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    color: white;
   }
   .dl-horizontal dd {
     margin-left: 180px;
@@ -1525,6 +1528,7 @@ address {
   margin-bottom: 20px;
   font-style: normal;
   line-height: 1.42857143;
+  color: white
 }
 code,
 kbd,
@@ -1671,6 +1675,9 @@ pre code {
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
+  font-weight: bold;
+  color: white;
+  
 }
 .col-xs-1,
 .col-xs-2,
@@ -2368,6 +2375,13 @@ caption {
 }
 th {
   text-align: left;
+  color: white
+}
+
+td{
+    color: white;
+    font-weight: bold;
+        
 }
 .table {
   width: 100%;
@@ -5031,49 +5045,7 @@ a.badge:focus {
 .nav-pills > li > a > .badge {
   margin-left: 3px;
 }
-.jumbotron {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  margin-bottom: 30px;
-  color: inherit;
-  background-color: #eeeeee;
-}
-.jumbotron h1,
-.jumbotron .h1 {
-  color: inherit;
-}
-.jumbotron p {
-  margin-bottom: 15px;
-  font-size: 21px;
-  font-weight: 200;
-}
-.jumbotron > hr {
-  border-top-color: #d5d5d5;
-}
-.container .jumbotron,
-.container-fluid .jumbotron {
-  padding-right: 15px;
-  padding-left: 15px;
-  border-radius: 6px;
-}
-.jumbotron .container {
-  max-width: 100%;
-}
-@media screen and (min-width: 768px) {
-  .jumbotron {
-    padding-top: 48px;
-    padding-bottom: 48px;
-  }
-  .container .jumbotron,
-  .container-fluid .jumbotron {
-    padding-right: 60px;
-    padding-left: 60px;
-  }
-  .jumbotron h1,
-  .jumbotron .h1 {
-    font-size: 63px;
-  }
-}
+
 .thumbnail {
   display: block;
   padding: 4px;
