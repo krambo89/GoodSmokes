@@ -108,7 +108,31 @@ The first this you will need to do is create a username and password. These will
 
 After you are registered you now should have access to the database. 
 
-From here you can click on the Cigars
+From here you can click on the Cigars, Brands, or Sizes tabs to bring up thier index's. You can also visit the Links tab for addition materials on cigars as well as a couple links to cigar buying websites.
+
+In the individual tabs you have the ability to scroll through the exisiting index, view the item details, create new items, editi existing ones, or delete exisiting ones.
+
+*Creating Items*
+
+To create a new item simply click the create button in the top left corner of the index. This will take you to the create menu. Follow the instruction listed here, and add in the required information.
+
+After you are finished click create, and you should see your new item listed in the cooresponding index.
+
+*Deleting Items*
+
+To delete an item first click the delete button on the right side of the item chart in the index. 
+
+This will take you to the delete menu. From here click on the delete button. You will be propted to concent tfurther. Select yes. Your Item should now be deleted.
+
+*Editing Items*
+
+To edit an item begin by clicking on the edit tab to the right of the item you wish to edit.
+
+This will take you to the edit menu. From here you can edit any of the information present except the items ID that cannot be changed and you will create an error if you attempt to change it. 
+
+You can however update associated IDs in the Edit Cigar menu because you are editing the Brand and Size Ids associated with the cigar, not changing the Ids all together.
+
+Once you have reviewed your changes click edit and your changes will be added to the index.
 
 MAINTAINERS
 ---------------------
